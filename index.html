@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+    <div class="wrapper">
+        <div id="price-wrapper"><span>Ваш заказ:</span>
+            <div id="customers-pizza">
+
+            </div>
+            <div id="price"> 
+                <span>Цена:</span>
+                <span id="sum"></span>
+            </div>
+        </div>
+        <div id="order-wrapper">
+            <img src="./imgs/0.png" alt="img" id="img">
+            <button id="btn" class="inactive btn btnactive">Заказать</button>
+        </div>
+        <div id="ingredients-wrapper">
+            <div id="basis">Основа для пиццы (руб.):
+                <label for="sm24" class="basis-pizza">
+                    <img src="./imgs/basis_pizza.png" alt="img">
+                    <input type="checkbox" value="Основа 24 см" name="basis" id="sm24">24 см......................... 5.00
+                </label>
+                <label for="sm32" class="basis-pizza">
+                    <img src="./imgs/basis_pizza.png" alt="img">
+                    <input type="checkbox" value="Основа 32 см" name="basis" id="sm32">32 см......................... 6.00
+                </label>
+                <label for="sm45" class="basis-pizza">
+                    <img src="./imgs/basis_pizza.png" alt="img">
+                    <input type="checkbox" value="Основа 45 см" name="basis" id="sm45">45 см......................... 7.00
+                </label>
+                <label for="sm60" class="basis-pizza">
+                    <img src="./imgs/basis_pizza.png" alt="img">
+                    <input type="checkbox" value="Основа 60 см" name="basis" id="sm60">60 см......................... 8.00
+                </label>
+            </div>
+            <div id="sauce">Соус для пиццы (руб.):
+                <label for="tomato" class="sauce-pizza">
+                    <img src="./imgs/sauce_PNG91.png" alt="img">
+                    <input type="checkbox" value="Соус томатный" name="sauce" id="tomato">Томатный ............... 2.00
+                </label>
+                <label for="creamy" class="sauce-pizza">
+                    <img src="./imgs/unnamed_sauce.png" alt="img">
+                    <input type="checkbox" value="Соус сливочный" name="sauce" id="creamy">Сливочный ........... 3.00
+                </label>
+                <label for="mustard" class="sauce-pizza">
+                    <img src="./imgs/mustard-big_1.png" alt="img">
+                    <input type="checkbox" value="Соус горчичный" name="sauce" id="mustard">Горчичный ........... 4.00
+                </label>
+                <label for="pesto" class="sauce-pizza">
+                    <img src="./imgs/pesto_sauce3.png" alt="img">
+                    <input type="checkbox" value='Соус "Песто"' name="sauce" id="pesto">"Песто" ................... 5.00
+                </label>
+            </div>
+            <div id="ingredients-meat">Мясные ингридиенты (руб.):
+                <label for="ham" class="meat-pizza">
+                    <img src="./imgs/bacon.png" alt="img">
+                    <input type="checkbox" value="Ветчина" name="meat" id="ham">Ветчина ................ 7.00
+                </label>
+                <label for="chicken" class="meat-pizza">
+                    <img src="./imgs/chicken.png" alt="img">
+                    <input type="checkbox" value="Курица" name="meat" id="chicken">Курица .................. 4.00
+                </label>
+                <label for="salami" class="meat-pizza">
+                    <img src="./imgs/sausage.png" alt="img">
+                    <input type="checkbox" value="Салями" name="meat" id="salami">Салями ................ 5.00
+                </label>
+                <label for="cheese" class="meat-pizza">
+                    <img src="./imgs/cheese.png" alt="img">
+                    <input type="checkbox" value="Сыр" name="meat" id="cheese">Сыр ........................ 6.00
+                </label>
+            </div>
+            <div id="ingredients-veggies">Овощные ингридиенты (руб.):            
+                <label for="mushrooms" class="veggies-pizza">
+                    <img src="./imgs/Mushrooms.png" alt="img">
+                    <input type="checkbox" value="Грибы" name="veggies" id="mushrooms">Грибы ................... 5.00
+                </label>      
+                <label for="pepper" class="veggies-pizza">
+                    <img src="./imgs/pepper-clip-art-431.png" alt="img">
+                    <input type="checkbox" value="Перец" name="veggies" id="pepper">Перец .................. 6.00
+                </label>
+    
+                <label for="tomatos" class="veggies-pizza">
+                    <img src="./imgs/tomatos.png" alt="img">
+                    <input type="checkbox" value="Помидоры" name="veggies" id="tomatos">Помидоры ........ 4.00
+                </label>
+        
+                <label for="olives" class="veggies-pizza">
+                    <img src="./imgs/olives_4.png" alt="img">
+                    <input type="checkbox" value="Оливки" name="veggies" id="olives">Оливки ................ 3.00
+                </label>             
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

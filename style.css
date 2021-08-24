@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+#body {
+    max-width: 1920px;
+    background: url(./imgs/body.jpg) top / cover no-repeat;
+}
+
+.wrapper {
+    max-width: 1200px;
+    min-width: 300px;
+    margin: 5% auto;
+    width: 75%;
+    min-height: 80vh;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0 50px rgba(255, 238, 0, 0.5);
+}
+
+#price-wrapper {
+    width: 50%;
+    padding-top: 20px;
+    min-width: 300px;
+}
+
+#order-wrapper {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    min-width: 300px;
+}
+
+#ingredients-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#basis, #sauce, #ingredients-meat, #ingredients-veggies {
+    width: 24%;
+    align-self: flex-start;
+    min-width: 210px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.basis-pizza, .sauce-pizza, .meat-pizza, .veggies-pizza {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.basis-pizza img, .sauce-pizza img, .meat-pizza img, .veggies-pizza img {
+    width: 40px;
+    padding: 5px 0;
+}
+
+.meat-pizza img, .veggies-pizza img {
+    width: 43px;
+    padding: 10px 0;
+}
+
+.basis-pizza input, .meat-pizza input, .veggies-pizza input, .sauce-pizza input {
+    display: none;
+}
+
+#img {
+    width: 60%;
+    padding: 20px;
+    
+}
+
+.btn {
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    margin: 20px;
+    outline: none;
+    color: #fff;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.4);
+    transition: all 0.2s ease-in-out;
+}
+
+.btnactive {
+    background: #ff0000;
+    cursor: pointer;
+}
+
+.btnactive:hover {
+    background: rgb(253, 100, 100);
+}
+
+.btnactive:active {
+    box-shadow: none;
+}
+
+.inactive {
+    background: gray;
+}
+
+#price-wrapper > span {
+    font-weight: bold;
+    font-size: 40px;
+    color: #ff0000;
+    padding: 0 30px;
+}
+
+#customers-pizza {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 70%;
+    height: 150px;
+    margin: 15px auto;
+    margin-bottom: 20px;
+}
+
+#customers-pizza span {
+    font-size: 18px;
+}
+
+#customers-pizza label {
+    width: 100%;
+    cursor: pointer;
+}
+
+#customers-pizza input {
+    display: none;
+}
+
+#price {
+    width: 60%;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+#price #sum {
+    font-size: 35px;
+    padding: 5px;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+#price span {
+    font-size: 25px;
+    padding: 5px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.musorka {
+    width: 13px;
+    margin: 0 12px;
+    cursor: pointer;
+    color: black;
+}
+
+#order-window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(100, 100, 100, 0.8);
+}
+
+@keyframes showMsg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#order {
+    position: relative;
+    margin: 10% auto;
+    width: 50vw;
+    height: 50vh;
+    background: url(./imgs/pizza-order.jpg) center / cover no-repeat;
+    box-shadow: 15px 15px 15px rgba(0,0,0,0.5);
+    animation: showMsg 1.3s ease-in-out forwards;
+    min-width: 290px;
+}
+
+#text-order {
+    position: absolute;
+    width: 50%;
+    min-width: 200px;
+    right: 7%;
+    top: 30%;
+    text-align: center;
+}
+
+#text-order span{
+    font-size: 45px;
+    color: yellow;
+}  
+
+@media screen and (max-width: 1300px) {
+    .btn {
+        font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1300 - 320)));
+    }
+
+    #text-order span {
+        font-size: calc(20px + (45 - 20) * ((100vw - 320px) / (1300 - 320)));
+    }
+
+    #price #sum {
+        font-size: calc(20px + (35 - 20) * ((100vw - 320px) / (1300 - 320)));
+    }
+    
+    #price {
+        margin-left: calc(30px + (30 - 10) * ((100vw - 320px) / (1300 - 320)));
+        width: calc(250px + (350 - 250) * ((100vw - 320px) / (1300 - 320)));
+    }
+
+    #customers-pizza span {
+        font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1300 - 320)));
+    }
+
+    #order-window {
+        height: calc(100vh + (20000 - 100) * ((100vw - 320px) / (1300 - 320)));
+    }
+}
